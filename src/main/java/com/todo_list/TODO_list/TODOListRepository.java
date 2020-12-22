@@ -26,7 +26,7 @@ public class TODOListRepository {
 
   public Task put(Task task) {
     long id = counter.incrementAndGet();
-    Task newTask = new Task(id, task.getTitle(), task.getText(), task.isDone(), task.getDueDate());
+    Task newTask = new Task(id, task.getTitle(), task.getText(), task.getDone(), task.getDueDate());
     tasks.put(id, newTask);
     return newTask;
   }
@@ -38,7 +38,7 @@ public class TODOListRepository {
 
     oldTask.setTitle(task.getTitle());
     oldTask.setText(task.getText());
-    oldTask.setDone(task.isDone());
+    oldTask.setDone(task.getDone());
     oldTask.setDueDate(task.getDueDate());
 
     oldTask.updateLastUpdated();

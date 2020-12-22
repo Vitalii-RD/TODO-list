@@ -10,13 +10,13 @@ public class Task {
   private Date dateCreated;
   private Date dueDate;
 
-  private boolean isDone;
+  private boolean done;
 
-  public Task(long id, String title, String text, boolean isDone, Date dueDate){
+  public Task(long id, String title, String text, boolean done, Date dueDate){
     this.id = id;
     this.title = title;
     this.text= text;
-    this.isDone = isDone;
+    this.done = done;
 
     Date now = new Date();
     this.dateCreated = now;
@@ -59,12 +59,12 @@ public class Task {
   public void setDueDate(Date dueDate) {
     this.dueDate = dueDate;
   }
-  public boolean isDone() {
-    return isDone;
+  public boolean getDone() {
+    return done;
   }
 
   public void setDone(boolean done) {
-    isDone = done;
+    this.done = done;
   }
 
   public Date getLastUpdated() {

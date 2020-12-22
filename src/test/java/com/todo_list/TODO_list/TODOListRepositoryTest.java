@@ -59,7 +59,7 @@ class TODOListRepositoryTest {
     repository.update(newTask, addedTask.getId());
 
     Assertions.assertEquals(newTask.getText(), addedTask.getText());
-    Assertions.assertEquals(newTask.isDone(), addedTask.isDone());
+    Assertions.assertEquals(newTask.getDone(), addedTask.getDone());
     Assertions.assertEquals(newTask.getDueDate(), addedTask.getDueDate());
   }
 
