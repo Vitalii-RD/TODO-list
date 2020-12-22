@@ -16,6 +16,7 @@ public class Task {
     this.id = id;
     this.title = title;
     this.text= text;
+    this.isDone = isDone;
 
     Date now = new Date();
     this.dateCreated = now;
