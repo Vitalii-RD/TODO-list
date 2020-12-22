@@ -2,8 +2,6 @@ package com.todo_list.TODO_list;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.text.ParseException;
 import java.util.Collection;
 
 @RestController
