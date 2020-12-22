@@ -5,26 +5,27 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collection;
 
 @RestController
+@RequestMapping("/tasks")
 public class TaskController {
   private TODOListRepository repository = new TODOListRepository();
 
-  @GetMapping("/tasks")
+  @GetMapping()
   public Collection<Task> getTasks() {
     return repository.getTasks();
   }
 
-  @PostMapping("/tasks")
+  @PostMapping()
   @ResponseStatus(HttpStatus.CREATED)
   public Task putTask(@RequestBody Task task) {
     return repository.put(task);
   }
 
-  @PutMapping("/tasks/{id}")
+  @PutMapping("/{id}")
   public Task updateTask(@RequestBody Task task, @PathVariable("id") long id) {
     return repository.update(task, id);
   }
 
-  @DeleteMapping("/tasks/{id}")
+  @DeleteMapping("/{id}")
   public void deleteTask(@PathVariable("id") long id) {
     repository.delete(id);
   }
