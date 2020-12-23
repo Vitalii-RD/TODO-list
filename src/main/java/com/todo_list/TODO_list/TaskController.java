@@ -21,12 +21,12 @@ public class TaskController {
   }
 
   @PutMapping("/{id}")
-  public Task updateTask(@RequestBody Task task, @PathVariable("id") long id) {
+  public Task updateTask(@RequestBody Task task, @PathVariable("id") int id) {
     return repository.update(task, id);
   }
 
   @DeleteMapping("/{id}")
-  public void deleteTask(@PathVariable("id") long id) {
+  public void deleteTask(@PathVariable("id") int id) {
     repository.delete(id);
   }
 }
